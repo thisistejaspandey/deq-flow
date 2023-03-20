@@ -92,7 +92,7 @@ def create_kitti_submission(model, output_path='kitti_submission'):
 @torch.no_grad()
 def validate_chairs(model, **kwargs):
     """ Perform evaluation on the FlyingChairs (test) split """
-    model.eval()
+    model.eval()k
     epe_list = []
     rho_list = []
     best = kwargs.get("best", {"epe":1e8})

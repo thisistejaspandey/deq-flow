@@ -180,6 +180,7 @@ class DEQFlow(nn.Module):
         log = (inp.get_device() == 0 and np.random.uniform(0,1) < 2e-3)
         
         z_out, info = self.deq(deq_func, z_init, log, sradius_mode, **kwargs)
+        
         flow_pred = [self._decode(z, coords0) for z in z_out]
 
         if self.training:
